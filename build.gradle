@@ -1,0 +1,19 @@
+apply plugin: 'java'
+apply plugin: 'application'
+
+
+
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '1.6'
+}
+
+
+task runSolutionsChecker(type: JavaExec, dependsOn:[classes]) {
+    main = 'pentominos.SolutionsChecker'
+}
+
+mainClassName = 'pentominos.BoardGenerator'
+
+
+
